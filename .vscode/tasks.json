@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build with SFML",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-g",
+                "${file}",
+                
+                // ===== SFML 헤더 경로 추가 =====
+                "-I", "C:\\msys64\\ucrt64\\include",
+                
+                // ===== SFML 라이브러리 경로 추가 =====
+                "-L", "C:\\msys64\\ucrt64\\lib",
+
+                // ===== SFML 라이브러리 링크 =====
+                "-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system",
+                
+                // ===== 출력 exe 파일 경로 =====
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build active file with SFML support"
+        }
+    ]
+}
