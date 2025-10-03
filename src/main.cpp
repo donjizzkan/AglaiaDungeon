@@ -1,21 +1,13 @@
 #include <iostream>
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
+#include "application.hpp"
 using namespace std;
-using namespace sf;
+
+// class는 PascalCase, 그 외 변수나 함수 등은 camelCase로 선언
 
 int main(void){
-    RenderWindow window(VideoMode(800,600), "Aglaia Dungeon");
-    window.setFramerateLimit(60);
-
-    while(window.isOpen()){
-        Event e;
-        while(window.pollEvent(e)){
-            if(e.type == Event::Closed)
-                window.close();
-        }
-        window.clear(Color(20,20,28));
-        window.display();
-    }
-   
+    App app;
+    app.run();
+    
     return 0;
 }
