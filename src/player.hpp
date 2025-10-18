@@ -3,9 +3,7 @@
 // =====================
 #include <iostream>
 #include <array>
-#include "SFML/System.hpp"
-#include "application.hpp"
-using namespace std;
+#include "sharing.hpp"
 
 // 절대적인 수치를 저장
 class Player{
