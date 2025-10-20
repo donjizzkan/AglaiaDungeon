@@ -4,7 +4,6 @@
 #include <iostream>
 #include <array>
 #include "sharing.hpp"
-
 // 절대적인 수치를 저장
 class Player{
 public:
@@ -17,7 +16,7 @@ public:
 struct PlayerStatus{
     int nowHp;
     int nowStamina;
-    array<StatusEffectDetail, (size_t)StatusEffect::cnt> effects;
+    std::array<StatusEffectDetail, (size_t)StatusEffect::cnt> effects;
 };
 
 // 상태이상 효과 종류들
