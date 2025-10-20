@@ -7,6 +7,8 @@ int App::run(){
         while (windowRun.isOpen()){
             // 여기서 대충 scenemanager 불러오면될듯
         }
+        
+        // window 종료시 다시 nullptr
         globalSharing.window = nullptr;
         return 0;
 }
